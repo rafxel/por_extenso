@@ -2,6 +2,17 @@
 
 Transforma algarismos em texto por extenso, observando as regras gramaticais
 
+# Utilização
+
+```
+>>> import por_extenso
+>>> por_extenso.numeros(2_980_033)
+"dois milhões, novecentos e oitenta mil e trinta e três"
+>>> por_extenso.moeda(193_034_001.01, moeda="real")
+"R$ 193.034.001,01 (cento e noventa e três milhões, trinta e quatro mil e um reais e um centavo)"
+```
+
+
 ## Regras
 
 ### Valores em moeda nacional ou estrangeira
@@ -10,35 +21,45 @@ Separam-se com vírgula as classes de números (milhar, milhão, bilhão etc.), 
 
 Exemplos em reais:
 
-1) R$ 385,62: trezentos e oitenta e cinco reais e sessenta e dois centavos.
-2) R$ 28.385,62: vinte e oito mil, trezentos e oitenta e cinco reais e sessenta e dois centavos.
-3) R$ 7.442.928.385,62: sete bilhões, quatrocentos e quarenta e dois milhões, novecentos e vinte e oito mil, trezentos e oitenta e cinco reais e sessenta e dois centavos.
-4) R$ 1.000,00: mil reais.
-5) R$ 5.000.000,00: cinco milhões de reais.
-6) R$ 5.123.450,00: cinco milhões, cento e vinte e três mil, quatrocentos e cinquenta reais.
+1. R$ 385,62: trezentos e oitenta e cinco reais e sessenta e dois centavos.
+2. R$ 28.385,62: vinte e oito mil, trezentos e oitenta e cinco reais e sessenta e dois centavos.
+3. R$ 7.442.928.385,62: sete bilhões, quatrocentos e quarenta e dois milhões, novecentos e vinte e oito mil, trezentos e oitenta e cinco reais e sessenta e dois centavos.
+4. R$ 1.000,00: mil reais.
+5. R$ 5.000.000,00: cinco milhões de reais.
+6. R$ 5.123.450,00: cinco milhões, cento e vinte e três mil, quatrocentos e cinquenta reais.
 
 Exemplos em moeda estrangeira:
 
-7) US$ 2.564.823,38: dois milhões, quinhentos e sessenta e quatro mil, oitocentos e vinte e três dólares americanos e trinta e oito centavos.
-8) € 825.236,15: oitocentos e vinte e cinco mil, duzentos e trinta e seis euros e quinze centavos.
-9) ¥ 10.815.018: dez milhões, oitocentos e quinze mil e dezoito ienes.
-10) US$ 54.000.000,00: cinquenta e quatro milhões de dólares americanos.
-11) € 5.022.600,32: cinco milhões, vinte e dois mil e seiscentos euros e trinta e dois centavos.
+1. US$ 2.564.823,38: dois milhões, quinhentos e sessenta e quatro mil, oitocentos e vinte e três dólares americanos e trinta e oito centavos.
+2. € 825.236,15: oitocentos e vinte e cinco mil, duzentos e trinta e seis euros e quinze centavos.
+3. ¥ 10.815.018: dez milhões, oitocentos e quinze mil e dezoito ienes.
+4. US$ 54.000.000,00: cinquenta e quatro milhões de dólares americanos.
+5. € 5.022.600,32: cinco milhões, vinte e dois mil e seiscentos euros e trinta e dois centavos.
 
-Quando o valor apresenta "zero centavo" (exemplos 4, 5 e 6), os algarismos "00" correspondentes aos centavos não são lidos nem escritos por extenso. 
+Entre o milhão e o milhar se o valor é inferior a 101, a separação é feita com a conjunção "e".
+
+Exemplos em reais:
+
+- R$ 2.612.100,00: dois milhões, seiscentos e doze mil e cem reais
+- R$ 132.010.098,00: cento e trinta e dois milhões, dez mil e noventa e oito reais
+
+Quando o valor apresenta "zero centavo" (exemplos 4, 5 e 6), os algarismos "00" correspondentes aos centavos não são lidos nem escritos por extenso.
 
 Exemplo:
+
 - Não se diz, vinte reais e zero centavo.
 
-Valores redondos de milhão para cima (exemplos 5 e 10) são grafados com a preposição "de". 
+Valores redondos de milhão para cima (exemplos 5 e 10) são grafados com a preposição "de".
 
-Exemplos: 
+Exemplos:
+
 - 5 milhões de reais;
 - 42,8 bilhões de dólares.
 
-Quando a centena é redonda ou inicia com zero (exemplos 9 e 11), utiliza-se a preposição "e".
+Quando a centena é redonda ou inicia com zero, utiliza-se a preposição "e".
 
-Exemplos: 
+Exemplos:
+
 - R$ 5.018,00 (cinco mil e dezoito reais);
 - R$ 2.600,00 (dois mil e seiscentos reais).
 
@@ -104,8 +125,8 @@ Exemplos:
 
 ## Referências
 
-https://www.normaculta.com.br/escrever-numeros-por-extenso-ou-em-algarismos/
-https://www.normaculta.com.br/numeros-por-extenso/
-https://www12.senado.leg.br/manualdecomunicacao/estilos/numeros
-https://www.professornews.com.br/component/content/article/6872-como-escrever-valor-por-extenso
-https://museulinguaportuguesa.org.br/numeros-por-extenso/
+<https://www.normaculta.com.br/escrever-numeros-por-extenso-ou-em-algarismos/>
+<https://www.normaculta.com.br/numeros-por-extenso/>
+<https://www12.senado.leg.br/manualdecomunicacao/estilos/numeros>
+<https://www.professornews.com.br/component/content/article/6872-como-escrever-valor-por-extenso>
+<https://museulinguaportuguesa.org.br/numeros-por-extenso/>
